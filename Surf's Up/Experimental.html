@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Experimental</title>
+
+    <style>
+        #map{
+            height: 100%;
+        }
+        html, body {
+            height:100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var PB = { lat: 32.796117, lng: -117.257800 };
+            var map = new google.maps.Map(
+                document.getElementById('map'), {
+                    zoom: 10,
+                    center: PB
+                });
+
+            //content string
+            var contentString = 'whole buncha divs daqgs';
+
+            var infoWindow = new google.maps.InfoWindow({
+                content: contentString
+            });
+
+            var marker = new google.maps.Marker({
+                position: PB,
+                map: map,
+                title: 'PB/Pacific Beach'
+            });
+
+            marker.addListener('click', function () {
+                infoWindow.open(map, marker);
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDJgZeDt2dxnzeVMER3VxPyrMlJpOnVAY&callback=initMap">
+    </script>
+</body>
+</html>

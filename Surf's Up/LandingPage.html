@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+<html>
+<title>Surf's Up</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <style>
+        .split {
+            height: 100%;
+            width: 50%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        .left {
+            left: 0;
+            background-color: tan;
+        }
+
+        .right {
+            right: 0;
+            background-color: cornflowerblue;
+        }
+
+        .centered {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        centered img {
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        .button {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+            background-color: cornflowerblue;
+            color: white;
+            padding: 45px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 8px;
+            border-color: cornflowerblue;
+            border: none;
+            font-size: xx-large;
+        }
+
+        .button:hover {
+            background-color: white;
+            color: cornflowerblue;
+        }
+    </style>
+
+</head>
+
+<body style="max-width:1300px">
+    <div class="split left">
+        <div class="centered">
+            <h1>Surfs Up</h1>
+            <img src="Images/Picture1.png" alt="HTML5 Icon" height="200" />
+        </div>
+    </div>
+    <div class="split right">
+        <div class="centered">
+            <a href="Map.html">
+                <button class="button" type="button">Surf</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
